@@ -10,8 +10,16 @@
 // You split up the numbers based on how many digits the largest number has
 // For example: 4579 is the largest number is an array, then it will take 4 iterations to sort the entire array.
 
-//// Radix Sort Helpers
+// Big O for Radix Sort
+// Best: O(nk)
+// Average: O(nk)
+// Worst: O(nk)
+// Space: O(n + k)
+// n is the length of thr array
+// k is the number of digits(average)
+// If all numbers are unique then Average is O(n log n)
 
+//// Radix Sort Helpers
 // Returns the digit you need at a specific index
 // Starting from the right side
 function getDigit(num, i) {

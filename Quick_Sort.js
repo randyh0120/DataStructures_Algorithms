@@ -1,3 +1,11 @@
+// Big O of Quick Sort
+// Best -> O(n log n)
+// Avergae -> O(n log n)
+// Worst -> O(n^2)
+
+// Space
+// O(log n)
+
 function pivot(arr, start = 0, end = arr.length - 1) {
   var pivot = arr[start];
   var swapIdx = start;

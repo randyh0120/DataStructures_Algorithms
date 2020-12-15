@@ -27,12 +27,39 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
+
+  pop() {
+    if (!this.head) return undefined;
+
+    var current = this.head;
+    var newTail = current;
+
+    // Loop through
+    while (current.next) {
+      console.log(current);
+
+      newTail = current;
+      curent = current.next;
+    }
+
+    // Update tail and tail.next
+    this.tail = newTail;
+    this.tail.next = null;
+    this.length--;
+
+    // If list is length 0
+    if (this.length === 0) {
+      this.head = null;
+      this.tail = null;
+    }
+
+    return current;
+  }
 }
 
 // var first = new Node("Hello");
-// first.next = new Node(" ");
-// first.next.next = new Node("World");
-// first.next.next.next = new Node("!");
+// first.next = new Node("World");
+// first.next.next = new Node("!");
 
 // var list = new SinglyLinkedList();
 // list.push("Hello");

@@ -83,6 +83,20 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
+
+  get(index) {
+    if (index < 0 || index >= this.length) return null;
+    if (index === 0) return this.head;
+
+    var newNode = this.head;
+
+    while (index !== 0) {
+      newNode = newNode.next;
+      index--;
+    }
+
+    return newNode;
+  }
 }
 
 // var first = new Node("Hello");

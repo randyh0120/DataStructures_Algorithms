@@ -143,20 +143,20 @@ class SinglyLinkedList {
   }
 
   reverse() {
-    var node = this.head;
+    var current = this.head;
     this.head = this.tail;
-    this.tail = node;
+    this.tail = current;
 
     var prev = null;
     var next;
 
     for (var i = 0; i < length; i++) {
-      next = node.next;
-      node.next = prev;
+      next = current.next;
+      current.next = prev;
 
       // Update values
-      prev = node;
-      node = next;
+      prev = current;
+      current = next;
 
       print();
     }

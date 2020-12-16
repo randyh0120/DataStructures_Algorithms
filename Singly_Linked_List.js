@@ -112,11 +112,7 @@ class SinglyLinkedList {
   insert(index, val) {
     if (index < 0 || index > this.length) return false;
 
-    if (index === this.length) {
-      this.length++;
-      this.push(val);
-      return true;
-    }
+    if (index === this.length) return !!this.push(val);
 
     // !! makes it a boolean
     if (index === 0) return !!this.unshift(val);
@@ -130,6 +126,20 @@ class SinglyLinkedList {
       this.length++;
       return true;
     }
+  }
+
+  remove(index) {
+    if (index < 0 || index > this.length) return undefined;
+    if (index === this.length - 1) return this.pop();
+    if (index === 0) return this.shift();
+
+    var previousNode = this.get(index - 1);
+
+    var removed = previousNode.next;
+    previousNode.next = removed.next;
+    this.length--;
+
+    return removed;
   }
 }
 

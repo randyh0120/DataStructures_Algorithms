@@ -1,6 +1,12 @@
 // Piece of Data - val
 // Reference to next node - next
 
+// Big O of Singly Linked List
+// Insertion - O(1)
+// Removal - O(1) or (n)
+// Searching - O(n)
+// Access - O(n)
+
 class Node {
   constructor(val) {
     this.val = val;

@@ -141,6 +141,22 @@ class SinglyLinkedList {
 
     return removed;
   }
+
+  reverse() {
+    // Starting
+  }
+
+  print() {
+    var arr = [];
+    var current = this.head;
+
+    while (current) {
+      arr.push(current.val);
+      current = current.next;
+    }
+
+    console.log(arr);
+  }
 }
 
 // var first = new Node("Hello");

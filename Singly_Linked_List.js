@@ -108,6 +108,29 @@ class SinglyLinkedList {
 
     return false;
   }
+
+  insert(index, val) {
+    if (index < 0 || index > this.length) return false;
+
+    if (index === this.length) {
+      this.length++;
+      this.push(val);
+      return true;
+    }
+
+    // !! makes it a boolean
+    if (index === 0) return !!this.unshift(val);
+
+    var prev = this.get(index - 1);
+    var newNode = new Node(val);
+
+    if (prev) {
+      newNode.next = prev.next;
+      prev.next = newNode.val;
+      this.length++;
+      return true;
+    }
+  }
 }
 
 // var first = new Node("Hello");

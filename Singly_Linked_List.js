@@ -143,7 +143,25 @@ class SinglyLinkedList {
   }
 
   reverse() {
-    // Starting
+    var node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+
+    var prev = null;
+    var next;
+
+    for (var i = 0; i < length; i++) {
+      next = node.next;
+      node.next = prev;
+
+      // Update values
+      prev = node;
+      node = next;
+
+      print();
+    }
+
+    return this;
   }
 
   print() {

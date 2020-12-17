@@ -27,6 +27,14 @@ arrayStack.shift(); // Removes first item in stack
 // You must traverse the entire list to reach the node before last to change it.
 // What we do to combat this is essentially use shift and unshift as push and pop. The functions are changed a bit.
 // Instead of adding and removing from the end, we do so to the beginning. This allows us to stay in constant time.
+
+// Big O of SLL Stacks
+// Push O(1)
+// Pop O(1)
+// Searching O(n)  // You dont need to Seach in a stack
+// Access Object(n) // You dont need to Access in a stack
+// If you need to search or access, an array would be a better option.
+
 class Singly_Node {
   constructor(val) {
     this.val = val;

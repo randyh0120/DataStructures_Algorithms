@@ -90,11 +90,11 @@ class DoublyLinkedList {
     var newHead = new Node(val);
 
     if (!this.head) {
-      this.head = val;
-      this.tail = val;
+      this.head = newHead;
+      this.tail = newHead;
     } else {
       this.head.prev = newNode;
-      newHead.next = oldHead;
+      newHead.next = this.head;
       this.head = newNode;
     }
 

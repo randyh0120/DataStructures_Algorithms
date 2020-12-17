@@ -1,3 +1,14 @@
+// Doubly Linked List
+// Big O
+// Insertion: O(1)
+// Removal O(1)
+// Searching O(n)
+// Access O(n)
+
+// Use Case:
+// Web Browsing
+// You can go to the previous and next page
+
 // Node
 // - val
 // - next

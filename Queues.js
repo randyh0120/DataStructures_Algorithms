@@ -11,7 +11,7 @@
 // When using an array as a Queue
 // You can use unshift() combined with pop()
 // or
-// push() combined with shift()
+// push() combined with shift()I
 var q = [];
 
 // Linked List based Queue

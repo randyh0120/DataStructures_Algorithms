@@ -1,6 +1,17 @@
 // Queue
 // FiFo
 
+// Big O
+// Insertion: O(1)
+// Removal: (1)
+// Searching: O(n)
+// Access: (n)
+
+// Array is not constant time.
+// It is O(n)  for insertion and removal
+// because it has to re-index
+// That is why we use a singly linked list as a custom Queue
+
 // You add to the end and remove from the beginning.
 
 // Ex.

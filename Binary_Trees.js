@@ -22,7 +22,8 @@
 // BST is a great way to store data that can compared
 // or
 // kept in an order
-// Ex. Left is always less than the right.
+// Ex. Left is always less than the parent.
+//     Right is always greater than the parent.
 //              10
 //             /  \
 //            8    12

@@ -20,6 +20,8 @@
 // BST:
 // Can only have 2 Children per Node
 // BST is a great way to store data that can compared
+// or
+// kept in an order
 // Ex. Left is always less than the right.
 //              10
 //             /  \

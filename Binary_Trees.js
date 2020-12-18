@@ -29,3 +29,70 @@
 //            8    12
 //           / \   / \
 //          6   9 11  15
+
+// BST Implementation
+class Node {
+  constructor(val) {
+    this.value = val;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
+  }
+
+  insert(val) {
+    var newNode = new Node(val);
+
+    if (!this.root) {
+      this.root = newNode;
+    } else {
+      var current = this.root;
+
+      while (true) {
+        // You can ignore if we have duplicates
+        // or
+        // Count the amount of duplicates we have per node
+        // I chose to ignore it
+        if (val === current.value) return undefined;
+
+        // If less than current
+        if (val < current.value) {
+          // Check if node is null
+          if (current.left === null) {
+            current.left = newNode;
+
+            // Node is not null
+          } else {
+            // Update current node
+            current = current.left;
+          }
+        }
+
+        // If greater than current
+        if (val > current.value) {
+          if (current.right === null) {
+            current.right = newNode;
+          } else {
+            current = current.right;
+          }
+        }
+      }
+    }
+
+    return this;
+  }
+}
+
+// This is how we insert if we had no functions
+// in the BST class
+/*
+var tree = new BinarySearchTree();
+tree.root = new Node(10);
+tree.root.left = new Node(8);
+tree.root.right = new Node(12);
+tree.root.left.right = new Node(9);
+*/

@@ -56,7 +56,7 @@ class BinarySearchTree {
         // You can ignore if we have duplicates
         // or
         // Count the amount of duplicates we have per node
-        // I chose to ignore it
+        // I choose to ignore it
         if (val === current.value) return undefined;
 
         // If less than current
@@ -85,6 +85,8 @@ class BinarySearchTree {
 
     return this;
   }
+
+  search(val) {}
 }
 
 // This is how we insert if we had no functions

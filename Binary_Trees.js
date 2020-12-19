@@ -64,6 +64,7 @@ class BinarySearchTree {
           // Check if node is null
           if (current.left === null) {
             current.left = newNode;
+            return this;
 
             // Node is not null
           } else {
@@ -76,17 +77,39 @@ class BinarySearchTree {
         if (val > current.value) {
           if (current.right === null) {
             current.right = newNode;
+            return this;
           } else {
             current = current.right;
           }
         }
       }
     }
-
-    return this;
   }
 
-  search(val) {}
+  find(val) {
+    if (!this.root) return false;
+
+    var current = this.root;
+    var found = false;
+
+    while (current && !found) {
+      if (val === current.value) return true;
+
+      // If less than current
+      if (val < current.value) {
+        // Update current node
+        current = current.left;
+      } else if (val > current.value) {
+        current = current.right;
+      } else {
+        found = true;
+      }
+    }
+
+    if (!found) return undefined;
+
+    return current;
+  }
 }
 
 // This is how we insert if we had no functions

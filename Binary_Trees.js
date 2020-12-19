@@ -6,6 +6,19 @@
 // Leaf - A node with no children
 // Edge - The connection between one node and another
 
+// Big O
+// Not guaranteed
+// Best and Average case
+// Insertion O(log n)
+// Searching O(log n)
+// As the number of Nodes double you increase 1 step
+// 2x # of nodes: 1 xtra step
+// 4x # of nodes: 2x steps
+// 8x # of nodes: 3x steps
+// When a BST is completely one sided it will be O(n)
+// BST is not good at one sided
+// Worst case is: O(n) but it is not common
+
 //// Use Cases for Trees
 // HTML DOM (Document Object Model)
 // Network Routing: i.e. Shortest Path

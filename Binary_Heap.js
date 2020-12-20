@@ -16,6 +16,8 @@
 // What is a Binary Heap?
 // A Heap is similar to a BST, but has different rules
 // Like a BST a Binary Heap can only have 2 children per node.
+// Each row/depth is filled before going to the next row
+// We accomplish this by using an array.
 
 /*
 // Max Binary Heap:

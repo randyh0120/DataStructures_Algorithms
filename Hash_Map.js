@@ -97,9 +97,28 @@ class HashMap {
 
     this.keyMap[index].push([key, value]);
   }
+
+  get(key) {
+    let index = this._hash(key);
+
+    if (!this.keyMap[index]) return undefined;
+
+    // Loop through the array at that index
+    for (let i = 0; i < this.keyMap[index].length; i++) {
+      // 'i' is the key-value inside the array
+      // '0' is where we store the key. 1 is where we store the value
+      if (this.keyMap[index][i][0] === key) {
+        // To return the entire key-value pair we remove [1]
+        // Here we are just returning the value in the pair
+        return this.keyMap[index][i][1];
+      }
+    }
+  }
 }
 
-let hm = new HashMap();
+/*
+let hm = new HashMap(17);
 hm.set("Hello World", "How are you!");
 hm.set("I love", "Pizza");
 hm.set("Lamborghini", "Aventador");
+*/

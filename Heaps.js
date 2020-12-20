@@ -40,6 +40,9 @@
 // Graph Traversals
 */
 
+/*
+// Heap Implementation
+//
 // We can represent a Heap with an array
 // To do this you must use a little math
 // 100
@@ -60,3 +63,5 @@
 // If we have a child node and you want its parent, then you subtract by 1 and divide by 2. You floor this number to get the current index.
 // Flooring the result will get the correct node for both left and right, since the right is further than the left in the array.
 // Formula: (n-1) / 2 -> Floor the result
+//
+*/

@@ -38,6 +38,7 @@
 // 1. Separate Chaining
 // At each index in out array we store values using a more sophisticated data structure (i.e. an array or a linked list).
 // This allows us to store multiple key-value pairs at the same index.
+// Essentially you add an array at an index that can hold multple key-value pairs
 //
 // 2. Linear Probing
 // When we find a collision, we search through an array to find the next empty slot.
@@ -85,4 +86,20 @@ class HashMap {
 
     return total;
   }
+
+  set(key, value) {
+    let index = this._hash(key);
+
+    if (!this.keyMap[index]) {
+      // Put an array into the index of the keyMap
+      this.keyMap[index] = [];
+    }
+
+    this.keyMap[index].push([key, value]);
+  }
 }
+
+let hm = new HashMap();
+hm.set("Hello World", "How are you!");
+hm.set("I love", "Pizza");
+hm.set("Lamborghini", "Aventador");

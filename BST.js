@@ -103,16 +103,33 @@ class BinarySearchTree {
   // Pre Order
   DFSPreOrder() {
     var data = [];
-    var current = this.root;
 
     function traverse(node) {
+      // Push before Traversing
       data.push(node.value);
 
       if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);
     }
 
-    traverse(current);
+    traverse(this.root);
+    return data;
+  }
+
+  // Depth First Search
+  // Post Order
+  DFSPostOrder() {
+    var data = [];
+
+    function traverse(node) {
+      // Traverse before Pushing
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+
+      data.push(node.value);
+    }
+
+    traverse(this.root);
     return data;
   }
 }

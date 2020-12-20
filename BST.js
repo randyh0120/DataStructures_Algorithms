@@ -132,6 +132,24 @@ class BinarySearchTree {
     traverse(this.root);
     return data;
   }
+
+  // Depth First Search
+  // In Order
+  DFSInOrder() {
+    var data = [];
+
+    function traverse(node) {
+      // Traverse both before Pushing
+      if (node.left) traverse(node.left);
+
+      data.push(node.value);
+
+      if (node.right) traverse(node.right);
+    }
+
+    traverse(this.root);
+    return data;
+  }
 }
 
 /*

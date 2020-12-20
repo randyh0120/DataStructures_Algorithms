@@ -87,5 +87,28 @@ class MaxBinaryHeap {
     this.bubbleUp();
   }
 
-  bubbleUp() {}
+  bubbleUp() {
+    var idx = this.values.length - 1;
+
+    const element = this.values[idx];
+
+    // While the index is greater than 0 which is the root node
+    while (idx > 0) {
+      let parentIdx = Math.floor((idx - 1) / 2);
+      let parent = this.vales[parentIdx];
+      console.log(parent);
+
+      if (element <= parent) break;
+
+      // If element > parent then do the rest
+      this.values[parentIdx] = element;
+      this.values[idx] = parent;
+      idx = parentIdx;
+    }
+  }
 }
+
+/*
+let heap = new MaxBinaryHeap();
+heap.insert(55);
+*/

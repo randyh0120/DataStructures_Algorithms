@@ -67,7 +67,7 @@
 */
 
 /*
-// Heap Implementation
+// MaxBinaryHeap Implementation
 // 
 // You push the val into the array
 // Then you compare if it is greater than its parent node
@@ -75,3 +75,17 @@
 // You repeat until it is not greater.
 // This swapping is bubbling up a value in the heap
 */
+
+class MaxBinaryHeap {
+  constructor() {
+    this.values = [];
+  }
+
+  insert(element) {
+    this.values.push(element);
+
+    this.bubbleUp();
+  }
+
+  bubbleUp() {}
+}

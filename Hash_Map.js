@@ -44,22 +44,45 @@
 // Unlike separate chaining, this allows us to store a single key-value at each index.
 */
 
-// We will implement Separate Chaining
+/*
+// Implementation
+// We will implement using Separate Chaining
+// 
+// Set
+// 1. Accepts a key and a value
+// 2. Hashes the key
+// 3. Stores the key-value pair in the hash map array via separate chaining
+//
+// Get
+// 1. Accepts a Key
+// 2. Hashes the key
+// 3. Retieves the key-value pair in the hash map
+// 4. If the key isn't found, return indefined
+*/
 
-function hash(key, arrayLen) {
-  let total = 0;
-
-  // This reduces collisions
-  let primeNumber = 31;
-
-  // We will look only at the first 100 characters
-  // We are assumimg that we won't have a string with more than 100 characters
-  for (let i = 0; i < Math.min(key.length, 100); i++) {
-    // Map "a" to 1, "b" to 2, "c" to 3, etc.
-    // The "- 96" converts it to be alphabetically
-    let value = char.char.CodeAt(0) - 96;
-    total = (total + value) % arrayLen;
+class HashMap {
+  // Default prime number if we don't specify one
+  constructor(siize = 53) {
+    this.keyMap = new Array(size);
   }
 
-  return total;
+  _hash(key) {
+    let total = 0;
+
+    // This reduces collisions
+    let primeNumber = 31;
+
+    // We will look only at the first 100 characters
+    // We are assumimg that we won't have a string with more than 100 characters
+    for (let i = 0; i < Math.min(key.length, 100); i++) {
+      let char = key[i];
+
+      // Map "a" to 1, "b" to 2, "c" to 3, etc.
+      // The "- 96" converts it to be alphabetically
+      let value = char.char.CodeAt(0) - 96;
+      total = (total + primeNumber + value) % this.keyMap.length;
+    }
+
+    return total;
+  }
 }

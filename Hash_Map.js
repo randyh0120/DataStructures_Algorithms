@@ -35,7 +35,12 @@
 function hash(key, arrayLen) {
   let total = 0;
 
-  for (let char of key) {
+  // This reduces collisions
+  let primeNumber = 31;
+
+  // We will look only at the first 100 characters
+  // We are assumimg that we won't have a string with more than 100 characters
+  for (let i = 0; i < Math.min(key.length, 100); i++) {
     // Map "a" to 1, "b" to 2, "c" to 3, etc.
     // The "- 96" converts it to be alphabetically
     let value = char.char.CodeAt(0) - 96;

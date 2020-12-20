@@ -69,11 +69,21 @@
 /*
 // MaxBinaryHeap Implementation
 // 
+//// Insert
 // You push the val into the array
 // Then you compare if it is greater than its parent node
 // If it is greater you swap it
 // You repeat until it is not greater.
 // This swapping is bubbling up a value in the heap
+//
+//// ExtractMax
+// When we remove in a MaxBinaryHeap we always remove the max value which is the root.
+// We do this by:
+// Pushing a value into the array/heap
+// Make it the root
+// Then "Sink Down" until it is at the correct spot
+// When sinking down we compare if it is smaller.
+// If it is smaller then we swap the two and redo until it is not smaller than a child element or is the child element.
 */
 
 class MaxBinaryHeap {

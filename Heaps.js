@@ -41,7 +41,7 @@
 */
 
 /*
-// Heap Implementation
+// Heap Methodology
 //
 // We can represent a Heap with an array
 // To do this you must use a little math
@@ -64,4 +64,14 @@
 // Flooring the result will get the correct node for both left and right, since the right is further than the left in the array.
 // Formula: (n-1) / 2 -> Floor the result
 //
+*/
+
+/*
+// Heap Implementation
+// 
+// You push the val into the array
+// Then you compare if it is greater than its parent node
+// If it is greater you swap it
+// You repeat until it is not greater.
+// This swapping is bubbling up a value in the heap
 */

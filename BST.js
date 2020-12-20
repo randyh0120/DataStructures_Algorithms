@@ -1,5 +1,3 @@
-// Breath First Search (BFS)
-// Search by levels
 // This is built off of the BST
 
 // BST Implementation
@@ -98,6 +96,23 @@ class BinarySearchTree {
       if (node.right) queue.push(node.right);
     }
 
+    return data;
+  }
+
+  // Depth First Search
+  // Pre Order
+  DFSPreOrder() {
+    var data = [];
+    var current = this.root;
+
+    function traverse(node) {
+      data.push(node.value);
+
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+
+    traverse(current);
     return data;
   }
 }

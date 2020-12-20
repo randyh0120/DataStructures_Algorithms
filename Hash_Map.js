@@ -114,6 +114,44 @@ class HashMap {
       }
     }
   }
+
+  // Returns an array of all keys
+  keys() {
+    let keysArray = [];
+
+    // Loop through the array at that index
+    for (let i = 0; i < this.keyMap.length; i++) {
+      if (this.keyMap[i]) {
+        for (let j = 0; j < this.keyMap[i].length; j++) {
+          // Check if their is a duplicate value
+          if (!keysArray.includes(this.keyMap[i][j][0])) {
+            keysArray.push(this.keyMap[i][j][0]);
+          }
+        }
+      }
+    }
+
+    return keysArray;
+  }
+
+  // Returns an array of all values
+  values() {
+    let valuesArray = [];
+
+    // Loop through the array at that index
+    for (let i = 0; i < this.keyMap.length; i++) {
+      if (this.keyMap[i]) {
+        for (let j = 0; j < this.keyMap[i].length; j++) {
+          // Check if their is a duplicate value
+          if (!valuesArray.includes(this.keyMap[i][j][1])) {
+            valuesArray.push(this.keyMap[i][j][1]);
+          }
+        }
+      }
+    }
+
+    return valuesArray;
+  }
 }
 
 /*

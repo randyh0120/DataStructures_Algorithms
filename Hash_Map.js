@@ -31,3 +31,16 @@
 // Doesnt cluster ourputs as specific indices, but distributes uniformly
 // Deterministic (same inputs yields same output)
 */
+
+function hash(key, arrayLen) {
+  let total = 0;
+
+  for (let char of key) {
+    // Map "a" to 1, "b" to 2, "c" to 3, etc.
+    // The "- 96" converts it to be alphabetically
+    let value = char.char.CodeAt(0) - 96;
+    total = (total + value) % arrayLen;
+  }
+
+  return total;
+}

@@ -1,4 +1,17 @@
-// Heaps
+// Binary Heaps
+
+/*
+// Big O
+//
+// Best and Average and Worst
+// Insertion O(log n)
+// Deletion O(log n)
+// Search O(n)
+//
+// Binary Heap is not made to search.
+// Use a BST to search instead
+// It is O(n) because it is not sorted
+*/
 
 // What is a Binary Heap?
 // A Heap is similar to a BST, but has different rules

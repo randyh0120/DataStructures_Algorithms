@@ -8,6 +8,17 @@
 */
 
 /*
+// Big O
+// Average Case
+// Insert O(1)
+// Deletion O(1)
+// Access O(1)
+//
+// Worst case would be O(n) for Access and Deletion
+// But that is a rare occurance and when a hash table is one sided.
+*/
+
+/*
 // Python has Dictionaries
 // JS has Objects and Maps*
 // * Objects have som erestrictions, but are basically has tables

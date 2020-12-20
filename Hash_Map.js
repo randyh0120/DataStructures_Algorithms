@@ -22,15 +22,29 @@
 // Hashing
 // In order to look up values by key,
 // we need a way to convert keys into valid array indices.
-// i.e. We turn strings into a valid array index
+// i.e. We turn strings into a valid array index.
 //
 // A function that performs this task is called a has function.
 //
 // What makes a good hash?
-// Fast i.e. constant time
-// Doesnt cluster ourputs as specific indices, but distributes uniformly
-// Deterministic (same inputs yields same output)
+// Fast i.e. constant time.
+// Doesnt cluster ourputs as specific indices, but distributes uniformly.
+// Deterministic (same inputs yields same output).
 */
+
+/*
+// How we handle Collisions
+//
+// 1. Separate Chaining
+// At each index in out array we store values using a more sophisticated data structure (i.e. an array or a linked list).
+// This allows us to store multiple key-value pairs at the same index.
+//
+// 2. Linear Probing
+// When we find a collision, we search through an array to find the next empty slot.
+// Unlike separate chaining, this allows us to store a single key-value at each index.
+*/
+
+// We will implement Separate Chaining
 
 function hash(key, arrayLen) {
   let total = 0;

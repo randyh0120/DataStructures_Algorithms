@@ -14,3 +14,9 @@
 // Visual Hierarchy
 // File System Optimizations
 // They are using a Graph
+
+// Storing Graphs: Adjacency Matrix
+// We represent the data in a Matrix
+// All we store in the Matrix are the edges
+// Undirected Graphs are Symmetrical
+// Dirrected Graphs are NOT Symmetrical

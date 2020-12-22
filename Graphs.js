@@ -2,6 +2,7 @@
 
 // What is a Graph
 // A Graph is a collection of Nodes and the connection between those Nodes
+// The name Vertex and Node are interchangable
 
 // Use Cases
 // Recommdation Engine like Netflix recommending a movie

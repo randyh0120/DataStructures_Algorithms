@@ -68,9 +68,23 @@
 */
 
 /*
+// Undirected graphs
+// Have edges that do not have a direction. 
+// The edges indicate a two-way relationship, in that each edge can be traversed in both directions.
+// Like a Doubly Linked List
+//
+// Directed graphs
+// Have edges with direction. 
+// The edges indicate a one-way relationship, in that each edge can only be traversed in a single direction.
+// Like a Singly Linked List
+*/
+
+/*
 // We will use an Adjacency List
 // 
 // Why?
 // This takes up less space of the two.
 // Most data in the real-world tends to be sparser and/or larger graphs
+//
+// We will build an Undirected Graph
 */

@@ -18,9 +18,17 @@
 */
 
 /*
-// Storing Graphs: Adjacency Matrix
+// Storing Graphs: 
+// 
+// Adjacency Matrix
 // We represent the data in a Matrix
 // All we store in the Matrix are the edges
 // Undirected Graphs are Symmetrical
 // Dirrected Graphs are NOT Symmetrical
+//
+// Adjacency List
+// We represent it with a Hash Map with kay-values
+// i.e.:
+// A: ["A", "B"],
+// B: ["A", "C"]
 */

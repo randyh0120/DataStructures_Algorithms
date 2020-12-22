@@ -122,4 +122,19 @@ class Graph {
       (v) => v !== vertex1
     );
   }
+
+  removeVertex(vertex) {
+    while (this.adjacencyList[vertex].length) {
+      const adjacencyVertex = this.adjacencyList[vertex].pop();
+      // Since this is an undirected graph
+      // the order in the below function call does not matter
+      this.removeEdge(vertex, adjacencyVertex);
+    }
+
+    delete this.adjacencyList[vertex];
+  }
 }
+
+/*
+let g = new Graph();
+*/

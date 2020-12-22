@@ -88,3 +88,15 @@
 //
 // We will build an Undirected Graph
 */
+
+class Graph {
+  constructor() {
+    this.adjacencyList = {};
+  }
+
+  addVertex(vertex) {
+    // In this case if we have a duplicate we will overwrite it.
+    // You can easily check for this.
+    if (!this.adjacencyList[vertex]) this.adjacencyList[vertex] = [];
+  }
+}

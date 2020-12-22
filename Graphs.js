@@ -99,4 +99,12 @@ class Graph {
     // You can easily check for this.
     if (!this.adjacencyList[vertex]) this.adjacencyList[vertex] = [];
   }
+
+  addEdge(v1, v2) {
+    // If this was a directed graph we would only do
+    // the first line of code and not both of them.
+    // It will only be connected in one direction.
+    this.adjacencyList[v1].push[v2];
+    this.adjacencyList[v2].push[v1];
+  }
 }

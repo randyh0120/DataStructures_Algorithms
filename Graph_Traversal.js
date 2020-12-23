@@ -21,7 +21,9 @@
 // We deepen before we widen.
 //
 // BFS
-// 
+// We move through the width before the depth
+// We visit siblings before we visit neighbors
+// We visit all Nodes/Vertices at a level/depth before moving to the next level/depth
 */
 
 /*

@@ -77,7 +77,7 @@ class Graph {
     delete this.adjacencyList[vertex];
   }
 
-  depthFirstSearch(start) {
+  depthFirstRecursive(start) {
     const result = [];
     const visited = {};
     // Must do this line below because of the helper function.
@@ -100,6 +100,10 @@ class Graph {
 
     return result;
   }
+
+  // We will use an array to do this iteratively.
+  // We could also use a stack but implementing an array is quicker.
+  depthFirstIterative(start) {}
 }
 
 /*
@@ -119,4 +123,5 @@ g.addEdge("D", "F")
 g.addEdge("E", "F")
 
 g.depthFirstRecursive("A")
+g.depthFirstIterative("A")
 */

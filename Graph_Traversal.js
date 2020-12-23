@@ -28,10 +28,16 @@
 
 /*
 // Implementation
-// This will be a DFS Implementation
+//
+// DFS Implementation
 // We use the Graph we made in Graph.js
 // We will visit every Node/Vertex in this example
 // This will be a recursive solution
+//
+// BFS Implementation
+// We will use a Queue
+// We will implement a Queue with an array
+// Instead of push and pop we will use push and shift.
 */
 
 class Graph {
@@ -129,6 +135,10 @@ class Graph {
     }
 
     return result;
+  }
+
+  breathFirst(start) {
+    const queue = [start];
   }
 }
 

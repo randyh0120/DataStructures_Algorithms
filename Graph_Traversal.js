@@ -80,6 +80,8 @@ class Graph {
   depthFirstSearch(start) {
     const result = [];
     const visited = {};
+    // Must do this line below because of the helper function.
+    // The definition of "This" changes in the helper
     this.adjacencyList = this.adjacencyList;
 
     (function dfs(vertex) {

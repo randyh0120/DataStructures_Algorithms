@@ -103,7 +103,31 @@ class Graph {
 
   // We will use an array to do this iteratively.
   // We could also use a stack but implementing an array is quicker.
-  depthFirstIterative(start) {}
+  // The order of the iterative is different than the recursive. It does not matter becuase it still does what we want. It just goes a different path to get there.
+  depthFirstIterative(start) {
+    // We initial the stack with start
+    const stack = [start];
+    const result = [];
+    const visited = {};
+    let currentVertex;
+
+    visited[start] = true;
+
+    while (stack.length) {
+      //console.log(stack)
+      currentVertex = stack.pop();
+      result.push(currentVertex);
+
+      this.adjacencyList[currentVertex].forEach((neighbor) => {
+        if (!visited[neighbor]) {
+          visited[neighbor] = true;
+          stack.push(neighbor);
+        }
+      });
+    }
+
+    return result;
+  }
 }
 
 /*

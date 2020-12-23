@@ -139,6 +139,28 @@ class Graph {
 
   breathFirst(start) {
     const queue = [start];
+    const result = [];
+    const visited = {};
+    let currentVertex;
+
+    visited[start] = true;
+
+    while (queue.length) {
+      currentVertex = queue.shift();
+      result.push(currentVertex);
+
+      // This is how you reverse and go in the reverse direction
+      // Reverse meaning starting from the last neighbor in the neighbors list
+      //this.adjacencyList[currentVertex].slice.reverse.forEach((neighbor)
+      this.adjacencyList[currentVertex].forEach((neighbor) => {
+        if (!visited[neighbor]) {
+          visited[neighbor] = true;
+          queue.push(neighbor);
+        }
+      });
+    }
+
+    return result;
   }
 }
 
@@ -160,4 +182,14 @@ g.addEdge("E", "F")
 
 g.depthFirstRecursive("A")
 g.depthFirstIterative("A")
+
+g.breathFirst("A")
+
+//      A
+//    /   \
+//   B     C
+//   |     |
+//   D --- E
+//    \   /
+//      F
 */
